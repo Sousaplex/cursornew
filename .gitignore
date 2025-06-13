@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Editor-specific
+.vscode/
+.idea/
+
+# Local environment files
+*.local 
