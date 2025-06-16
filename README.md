@@ -3,9 +3,11 @@
 `cursornew` is a simple command-line tool to quickly scaffold a new project with a `.cursor` directory structure.
 
 It creates:
-- `.cursor/rules/`
-- `.cursor/plans/`
-- `.cursorignore`
+- `.cursor/rules/` (with example rule)
+- `.cursor/plans/` (with example plan)
+- `.cursor/settings.json`
+- `.cursor/.cursorignore`
+- `.env.local`
 
 After creating the files and directories, it will attempt to open the new project directory in Cursor.
 
