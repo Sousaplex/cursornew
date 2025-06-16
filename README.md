@@ -19,7 +19,9 @@ After creating the files and directories, it will attempt to open the new projec
     ```bash
     ./install.sh
     ```
-    The script will move the `cursornew` command to `/usr/local/bin`. It may ask for your password to do so (`sudo`).
+    The script will move the `cursornew` command to `/usr/local/bin`. It may ask for your password (`sudo`) to do so.
+
+    The installer will also attempt to install the `cursor` command-line tool if it isn't already, which is required for the auto-open feature.
 
 ## Usage
 
@@ -40,4 +42,4 @@ cursornew .
 ## Prerequisites
 
 - This script is designed for macOS and Linux environments.
-- For the auto-open feature to work, you must have the `cursor` command-line tool installed and available in your system's PATH. 
+- For the auto-open feature to work, the `cursor` command-line tool must be installed. The installer will attempt to do this for you. 
