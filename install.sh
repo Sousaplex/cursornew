@@ -73,10 +73,10 @@ fi
 # Move the script using sudo if necessary
 echo "Attempting to install 'cursornew' to ${TARGET_EXECUTABLE}"
 if [ -w "$INSTALL_DIR" ]; then
-    mv cursornew "$TARGET_EXECUTABLE"
+    cp cursornew "$TARGET_EXECUTABLE"
 else
-    echo "Write permission denied. Using sudo to move the file."
-    sudo mv cursornew "$TARGET_EXECUTABLE"
+    echo "Write permission denied. Using sudo to copy the file."
+    sudo cp cursornew "$TARGET_EXECUTABLE"
 fi
 
 # Install templates
@@ -87,6 +87,9 @@ if [ -d "$TEMPLATE_DEST_DIR" ]; then
 fi
 sudo mkdir -p "$TEMPLATE_DEST_DIR"
 sudo cp -r templates/* "$TEMPLATE_DEST_DIR/"
+
+# Set read permissions for all users on the copied templates
+sudo chmod -R a+r "$TEMPLATE_DEST_DIR"
 
 
 # Verify installation

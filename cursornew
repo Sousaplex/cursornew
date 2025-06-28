@@ -47,8 +47,8 @@ mkdir -p .cursor/plans
 echo "Copying templates..."
 cp -r "${TEMPLATE_SRC_DIR}/rules/." .cursor/rules/
 cp -r "${TEMPLATE_SRC_DIR}/plans/." .cursor/plans/
-cp "${TEMPLATE_SRC_DIR}/cursorignore" .cursor/.cursorignore
-cp "${TEMPLATE_SRC_DIR}/settings.json" .cursor/settings.json
+cp "${TEMPLATE_SRC_DIR}/cursorignore" .gitignore
+cp "${TEMPLATE_SRC_DIR}/settings.json" settings.json
 cp "${TEMPLATE_SRC_DIR}/env.local.template" .env.local
 
 echo "Project initialized successfully with templates."
